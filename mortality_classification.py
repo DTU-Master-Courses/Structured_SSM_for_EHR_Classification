@@ -36,9 +36,9 @@ def train_test(
     train_collate_fn = PairedDataset.paired_collate_fn_truncate
     val_test_collate_fn = MortalityDataset.non_pair_collate_fn_truncate
 
-    train_dataloader = DataLoader(train_pair, train_batch_size, shuffle=True, num_workers=16, collate_fn=train_collate_fn, pin_memory=True)
-    test_dataloader = DataLoader(test_data, batch_size, shuffle=True, num_workers=16, collate_fn=val_test_collate_fn, pin_memory=True)
-    val_dataloader = DataLoader(val_data, batch_size, shuffle=False, num_workers=16, collate_fn=val_test_collate_fn, pin_memory=True)
+    train_dataloader = DataLoader(train_pair, train_batch_size, shuffle=True, num_workers=8, collate_fn=train_collate_fn, pin_memory=True)
+    test_dataloader = DataLoader(test_data, batch_size, shuffle=True, num_workers=8, collate_fn=val_test_collate_fn, pin_memory=True)
+    val_dataloader = DataLoader(val_data, batch_size, shuffle=False, num_workers=8, collate_fn=val_test_collate_fn, pin_memory=True)
 
     # assign GPU
     if torch.cuda.is_available():

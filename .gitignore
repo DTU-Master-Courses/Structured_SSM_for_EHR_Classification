@@ -1,0 +1,14 @@
+# Ignore numpy binary files
+*.npy
+
+# Ignore HDF5 files
+*.h5
+
+# Other common ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+.DS_Store
