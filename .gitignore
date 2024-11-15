@@ -9,6 +9,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
+# .env
 # .venv
 .DS_Store
